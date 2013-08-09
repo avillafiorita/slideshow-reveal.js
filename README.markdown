@@ -22,7 +22,7 @@ Reveal.js is a HTML presentation framework created by [Hakim El Hattab](http://h
 Clone this repository using `git` and save it in S9's templates directory:
 
     $ cd ~/.slideshow/templates
-    $ git clone git://github.com/avillafiorita/slideshow-reveal.git
+    $ git clone https://github.com/avillafiorita/slideshow-reveal.js.git
 
 To check if the new template got installed, use the `list` command:
 
