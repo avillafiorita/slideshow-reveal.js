@@ -15,7 +15,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="reveal/css/reveal.min.css">
-		<link rel="stylesheet" href="reveal/css/theme/default.css" id="theme">
+
+    <% if @headers['theme'] =~ /theme not found/ %>
+        <link rel="stylesheet" href="reveal/css/theme/default.css" id="theme">
+    <% else %>
+        <link rel="stylesheet" href="reveal/css/theme/<%= @headers['theme'] %>.css" id="theme">
+    <% end %>
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
