@@ -24,6 +24,11 @@ Clone this repository using `git` and save it in S9's templates directory:
     $ cd ~/.slideshow/templates
     $ git clone https://github.com/avillafiorita/slideshow-reveal.js.git
 
+**Important!**  Reveal.js - Slide Show (this template) keeps [Reveal.js](https://github.com/hakimel/reveal.js) source files as a [git submodule](http://git-scm.com/book/en/v2/Git-Tools-Submodules). So you need to fetch it, otherwise you will get an error when building the presentation.
+
+    $ cd ~/.slideshow/templates/slideshow-reveal.js
+    $ git submodule init && git submodule update
+
 To check if the new template got installed, use the `list` command:
 
     $ slideshow list
@@ -36,6 +41,19 @@ Listing something like:
 Now you're ready to use it using the `-t/--template` switch. Example:
 
     $ slideshow build doc/s9-reveal.textile -t reveal --h2
+
+
+
+## Troubleshooting
+
+If you get an error like the following when building the presentation:
+
+> *** error: No such file or directory @ rb_file_s_stat - /$HOME/.slideshow/templates/slideshow-reveal.js/reveal.js/Gruntfile.js
+
+Then you probably forgot to fetch the reveal.js library. Run the following to fetch it and fix the problem.
+
+    $ cd ~/.slideshow/templates/slideshow-reveal.js
+    $ git submodule init && git submodule update
 
 
 ## Documentation
