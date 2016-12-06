@@ -1,47 +1,23 @@
-# Reveal.js - Slide Show
+# Reveal.js - Slideshow
 
-## What it is
+**OBSOLETE:** replaced by the official slideshow template.
 
-A template which outputs reveal.js presentations using slideshow.
+New working version of the template available at: https://github.com/slideshow-templates/slideshow-reveal.js
 
+## What it was
 
-## What's Slide Show (S9)?
+A template which outputed reveal.js presentations using slideshow.
 
-A Ruby gem that lets you create slide shows and author slides in plain text
-using a wiki-style markup language that's easy-to-write and easy-to-read.
-More [Slide Show (S9) Project Site](http://slideshow-s9.github.io).
+## Slideshow and Textile
 
+Slideshow dropped support for textile in version 3.0.  If you have slides written in Textile which you want to present using this template, my suggestion is using "pandoc":http://pandoc.org/ to convert them to markdown and then use the latest version of slideshow.
 
-## What's Reveal.js
+If you are nostalgic, you can download version 2 of slideshow, checkout version @slideshow-v2@ of this repo and follow the instructions. 
 
-Reveal.js is a HTML presentation framework created by [Hakim El Hattab](http://hakim.se/).  It is available at [Reveal.js on Github](https://github.com/hakimel/reveal.js)
+h2. Useful Links:
 
-
-## Installation
-
-Clone this repository using `git` and save it in S9's templates directory:
-
-    $ cd ~/.slideshow/templates
-    $ git clone https://github.com/avillafiorita/slideshow-reveal.js.git
-
-To check if the new template got installed, use the `list` command:
-
-    $ slideshow list
-
-Listing something like:
-
-    Installed templates include:
-      reveal (~/.slideshow/templates/slideshow-reveal.js/reveal.txt)
-
-Now you're ready to use it using the `-t/--template` switch. Example:
-
-    $ slideshow build doc/s9-reveal.textile -t reveal --h2
+* [Slide Show Templates](https://github.com/slideshow-templates/slideshow-reveal.js)
+* [Slide Show (S9) Project Site](http://slideshow-s9.github.io)
+* [Reveal.js](http://lab.hakim.se/reveal-js/)
 
 
-## Documentation
-
-Have a look at:
-
-    doc/s9-reveal.textile
-
-which describes some of the features made available by S9 and Reveal.js.
